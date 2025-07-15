@@ -1,0 +1,26 @@
+# Export OSRS Table Backup (multiple pages)
+
+This bookmarklet exports all saved OSRS Wiki table highlight backup data (`osrsTableBackup`) from your browser's localStorage into a formatted Excel (.xlsx) file. The file includes headers and the current date in its filename.
+
+## How to Use
+
+1. Copy the **minified** bookmarklet code (`osrs-export-table-backup.min.js`).
+2. Create a new bookmark in your browser.
+3. Paste the minified code into the bookmark’s URL/location field.
+4. After saving some pages using the backup bookmarklet, visit any page.
+5. Click the bookmark to export all saved data as an Excel file.
+6. If a backup exists, an `.xlsx` file will be downloaded containing all saved entries.
+
+## Notes
+
+- Requires internet access to load the SheetJS (XLSX) library.
+- Relies on `osrsTableBackup` data saved in your browser's localStorage.
+- Loads the XLSX library dynamically if not already loaded.
+- Saves file as `OSRC wiki tables backup YYYY-MM-DD.xlsx`.
+- The exported spreadsheet includes: page ID, page name, URL, table number, and highlight string.
+- If no backup data is found in localStorage, an alert will be shown.
+- Works entirely client-side; no data leaves your browser.
+
+---
+
+Tags: OSRS, wiki, bookmarklet, JavaScript, localStorage, export, Excel, XLSX
